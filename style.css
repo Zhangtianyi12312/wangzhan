@@ -1,0 +1,197 @@
+/* ==========================================================
+   个人主页样式
+   想改颜色就改下面这 6 个变量，全站自动变。
+   ========================================================== */
+:root {
+  --bg: #f7f8fa;          /* 页面背景 */
+  --card: #ffffff;        /* 卡片背景 */
+  --text: #1f2328;        /* 主要文字 */
+  --muted: #6b7280;       /* 次要文字 */
+  --accent: #2f6fed;      /* 主题色（按钮、链接） */
+  --border: #e5e7eb;      /* 边框 */
+  --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: min(900px, 92%);
+  margin: 0 auto;
+}
+
+/* ---------- 顶部介绍区 ---------- */
+.hero {
+  background: linear-gradient(160deg, #eef3ff 0%, #f7f8fa 60%);
+  padding: 80px 0 70px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+  text-align: center;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 34px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 24px rgba(47, 111, 237, 0.25);
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 11px 24px;
+  border-radius: 999px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform .15s, box-shadow .15s, background .15s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(47, 111, 237, .28);
+}
+
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(47,111,237,.35); }
+
+.btn-ghost {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover { background: #f0f2f5; }
+
+/* ---------- 通用区块 ---------- */
+.section {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 14px;
+}
+
+.section h2::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 6px;
+  width: 4px; height: 20px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.prose {
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+/* ---------- 技能标签 ---------- */
+.tags { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.tag {
+  background: #eef3ff;
+  color: #2754b8;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* ---------- 项目卡片 ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  transition: transform .18s, box-shadow .18s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, .07);
+}
+
+.card h3 { font-size: 17px; margin-bottom: 8px; }
+
+.card p { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+
+.card-link {
+  color: var(--accent);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.card-link:hover { text-decoration: underline; }
+
+/* ---------- 联系 ---------- */
+.links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.links a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color .15s;
+}
+
+.links a:hover { border-color: var(--accent); }
+
+/* ---------- 页脚 ---------- */
+.footer {
+  padding: 36px 0 44px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ---------- 手机上更紧凑 ---------- */
+@media (max-width: 600px) {
+  .hero { padding: 60px 0 50px; }
+  .hero h1 { font-size: 30px; }
+  .section { padding: 40px 0; }
+}
