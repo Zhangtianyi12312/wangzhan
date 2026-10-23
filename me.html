@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ↓ 改这里：浏览器标签页上的标题 -->
+  <title>你的名字 · 个人主页</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== 顶部介绍区 ==================== -->
+  <header class="hero">
+    <div class="container hero-inner">
+
+      <!-- 头像：现在是文字占位，以后换成 <img src="avatar.jpg"> 即可 -->
+      <div class="avatar">AI</div>
+
+      <!-- ↓ 改这里：你的名字 -->
+      <h1>你的名字</h1>
+
+      <!-- ↓ 改这里：一句话介绍自己 -->
+      <p class="tagline">人工智能专业 · 大三在读 · 对深度学习和小工具感兴趣</p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">看看我的项目</a>
+        <a class="btn btn-ghost" href="#contact">联系我</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================== 关于我 ==================== -->
+  <section class="section container" id="about">
+    <h2>关于我</h2>
+    <!-- ↓ 改这里：写两三句话介绍自己 -->
+    <p class="prose">
+      这里是自我介绍。可以写你在学什么、做过什么、对什么感兴趣。
+      不用写得很正式，像跟人聊天一样就行。
+    </p>
+    <p class="prose">
+      比如：最近在做流体阻力实验的数据处理，也在学 PyTorch，
+      平时喜欢折腾各种效率工具。
+    </p>
+  </section>
+
+  <!-- ==================== 技能 ==================== -->
+  <section class="section container" id="skills">
+    <h2>技能</h2>
+    <div class="tags">
+      <!-- ↓ 改这里：增删技能标签 -->
+      <span class="tag">Python</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">数据分析</span>
+      <span class="tag">SQL</span>
+      <span class="tag">R</span>
+      <span class="tag">Linux</span>
+    </div>
+  </section>
+
+  <!-- ==================== 项目 ==================== -->
+  <section class="section container" id="projects">
+    <h2>项目</h2>
+    <div class="cards">
+
+      <!-- 一个项目 = 一张卡片。想加项目就复制一整块 -->
+      <article class="card">
+        <h3>项目名称一</h3>
+        <p>一句话说明这个项目做了什么、用了什么技术。</p>
+        <a class="card-link" href="#" target="_blank">查看 →</a>
+      </article>
+
+      <article class="card">
+        <h3>项目名称二</h3>
+        <p>一句话说明这个项目做了什么、用了什么技术。</p>
+        <a class="card-link" href="#" target="_blank">查看 →</a>
+      </article>
+
+      <article class="card">
+        <h3>项目名称三</h3>
+        <p>一句话说明这个项目做了什么、用了什么技术。</p>
+        <a class="card-link" href="#" target="_blank">查看 →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ==================== 联系方式 ==================== -->
+  <section class="section container" id="contact">
+    <h2>联系我</h2>
+    <p class="prose">想交流或者有合作想法，随时找我：</p>
+    <div class="links">
+      <!-- ↓ 改这里：换成你自己的地址 -->
+      <a href="mailto:you@example.com">邮箱</a>
+      <a href="https://github.com/" target="_blank">GitHub</a>
+      <a href="https://space.bilibili.com/" target="_blank">Bilibili</a>
+    </div>
+  </section>
+
+  <!-- ==================== 页脚 ==================== -->
+  <footer class="footer">
+    <p>© 2026 你的名字 · 用 HTML 和 CSS 手写</p>
+  </footer>
+
+</body>
+</html>
