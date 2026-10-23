@@ -1,4 +1,4 @@
-﻿# 资源导航 · 说明
+# 资源导航 · 说明
 
 一个纯静态的常用网站导航页。没有后端、没有数据库，双击就能看。
 
@@ -151,6 +151,22 @@ const GAP = 46;           // 粒子间最小间距
 如果只改背景色不改阴影，整页会变成一团没有体积的灰。
 
 粒子层也跟着换配色：`particles.js` 顶部有 `PALETTE.light` 和 `PALETTE.dark`，切换时通过 `themechange` 事件同步。
+
+## 缓存与版本号
+
+GitHub Pages 的响应头是 `Cache-Control: max-age=14400`（4 小时），
+意味着改完样式后，访客可能仍看到旧版本；如果正好在部署窗口访问，还可能把 404 缓存下来，表现为「页面没样式」。
+
+解决办法：`index.html` 里的引用都带版本参数：
+
+```html
+<link rel="stylesheet" href="style.css?v=2">
+<script src="app.js?v=2"></script>
+```
+
+**每次改动 CSS / JS / 数据后，把这些 `v=2` 全部加一**（改成 `v=3`），浏览器就会当成新文件重新下载。
+只改 `data.js` 里的站点数据也一样要加，否则访客看不到新加的站点。
+
 ## 发布
 
 ```powershell
